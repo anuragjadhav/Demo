@@ -19,6 +19,8 @@ protocol RecordingViewDelegate : class {
 class RecordingView: UIView {
     
     weak var delegate: RecordingViewDelegate?
+    weak var delegate: RecordingViewDelegate?
+    weak var delegate: RecordingViewDelegate?
     
     var timer = Timer()
     
