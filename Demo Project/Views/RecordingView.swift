@@ -22,6 +22,8 @@ class RecordingView: UIView {
     var testProperty2: String = "Test"
     
     weak var delegate: RecordingViewDelegate?
+    weak var delegate: RecordingViewDelegate?
+    weak var delegate: RecordingViewDelegate?
     
     var timer = Timer()
     
