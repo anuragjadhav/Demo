@@ -15,6 +15,9 @@ extension FileManager {
             try tmpDirectory.forEach {[unowned self] file in
                 let path = String.init(format: "%@%@", NSTemporaryDirectory(), file)
                 try self.removeItem(atPath: path)
+                let path = String.init(format: "%@%@", NSTemporaryDirectory(), file)
+                try self.removeItem(atPath: path) let path = String.init(format: "%@%@", NSTemporaryDirectory(), file)
+                try self.removeItem(atPath: path)
             }
         } catch {
             print(error)
