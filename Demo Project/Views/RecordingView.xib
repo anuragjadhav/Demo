@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordingView" customModule="Demo_Project" customModuleProvider="target">
+            <connections>
+                <outlet property="attachButton" destination="L1d-Yr-QAw" id="Gj2-Iu-obX"/>
+                <outlet property="cancelButton" destination="r5o-bg-AZf" id="0jb-Vr-6jk"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="DbJ-GJ-XK5"/>
+                <outlet property="micView" destination="0bb-tV-cgK" id="JyB-ZU-LxO"/>
+                <outlet property="recordingButton" destination="uT1-d2-EYo" id="L6j-Cl-aIg"/>
+                <outlet property="timeLabel" destination="jSq-Yr-j2s" id="fOf-wU-PCg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-tV-cgK">
+                    <rect key="frame" x="90" y="32" width="60" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uT1-d2-EYo">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <state key="normal" image="microphone"/>
+                            <connections>
+                                <action selector="recordingButtonTapped:" destination="-1" eventType="touchUpInside" id="s3O-SV-QmG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="uT1-d2-EYo" firstAttribute="top" secondItem="0bb-tV-cgK" secondAttribute="top" id="6rP-7V-uVT"/>
+                        <constraint firstAttribute="width" constant="60" id="OHv-j8-DrR"/>
+                        <constraint firstAttribute="bottom" secondItem="uT1-d2-EYo" secondAttribute="bottom" id="PEK-Yj-Kf8"/>
+                        <constraint firstItem="uT1-d2-EYo" firstAttribute="leading" secondItem="0bb-tV-cgK" secondAttribute="leading" id="WEZ-1T-NU7"/>
+                        <constraint firstAttribute="trailing" secondItem="uT1-d2-EYo" secondAttribute="trailing" id="kG1-qT-HXk"/>
+                        <constraint firstAttribute="height" constant="60" id="ll0-wo-oGl"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSq-Yr-j2s">
+                    <rect key="frame" x="32" y="134" width="176" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="gsd-re-nIS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P45-Rz-zEp">
+                    <rect key="frame" x="0.0" y="190" width="240" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1d-Yr-QAw">
+                            <rect key="frame" x="120" y="0.0" width="120" height="50"/>
+                            <state key="normal" title="Attach"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="attachButtonTapped:" destination="-1" eventType="touchUpInside" id="TDb-bC-EpF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5o-bg-AZf">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                            <state key="normal" title="Cancel"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="EVb-mF-zOK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="r5o-bg-AZf" firstAttribute="height" secondItem="P45-Rz-zEp" secondAttribute="height" id="4ct-EC-y9W"/>
+                        <constraint firstAttribute="trailing" secondItem="L1d-Yr-QAw" secondAttribute="trailing" id="DsE-8c-Ml4"/>
+                        <constraint firstItem="L1d-Yr-QAw" firstAttribute="top" secondItem="P45-Rz-zEp" secondAttribute="top" id="EQj-um-hXM"/>
+                        <constraint firstItem="L1d-Yr-QAw" firstAttribute="width" secondItem="r5o-bg-AZf" secondAttribute="width" id="JZ8-i4-CYs"/>
+                        <constraint firstItem="r5o-bg-AZf" firstAttribute="top" secondItem="P45-Rz-zEp" secondAttribute="top" id="Lj6-ue-QFC"/>
+                        <constraint firstAttribute="height" constant="50" id="QcV-vP-jOe"/>
+                        <constraint firstItem="r5o-bg-AZf" firstAttribute="width" secondItem="P45-Rz-zEp" secondAttribute="width" multiplier="0.5" id="gTU-lf-PaE"/>
+                        <constraint firstItem="r5o-bg-AZf" firstAttribute="leading" secondItem="P45-Rz-zEp" secondAttribute="leading" id="l0d-hu-ptA"/>
+                        <constraint firstItem="L1d-Yr-QAw" firstAttribute="height" secondItem="r5o-bg-AZf" secondAttribute="height" id="pmp-7B-cmo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="P45-Rz-zEp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1ZF-yD-ZHW"/>
+                <constraint firstItem="P45-Rz-zEp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3Dl-w2-4wM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jSq-Yr-j2s" secondAttribute="trailing" constant="32" id="DkH-Sg-Be7"/>
+                <constraint firstItem="0bb-tV-cgK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="KgS-XH-woQ"/>
+                <constraint firstItem="jSq-Yr-j2s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="Quc-xC-lGR"/>
+                <constraint firstItem="0bb-tV-cgK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vf5-Cv-KZR"/>
+                <constraint firstItem="P45-Rz-zEp" firstAttribute="top" secondItem="jSq-Yr-j2s" secondAttribute="bottom" constant="32" id="Wml-FF-zYs"/>
+                <constraint firstItem="P45-Rz-zEp" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="pca-YK-LUi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="15"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-19.199999999999999" y="-136.73163418290855"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="microphone" width="418.90908813476562" height="418.90908813476562"/>
+    </resources>
+</document>
