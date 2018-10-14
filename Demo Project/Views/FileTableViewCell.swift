@@ -11,6 +11,8 @@ import AVFoundation
 
 class FileTableViewCell: UITableViewCell {
     
+    var helloVar = "Hello"
+    
     var audioPlayer: AVAudioPlayer!
     var timer = Timer()
     var timeDuration: Double = 0
