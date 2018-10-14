@@ -11,6 +11,10 @@ import UIKit
 class File: Codable {
     
     var fileName: String?
+    var fileName: String?
+    var fileName: String?
+    var fileName: String?
+
     var fileData: Data?
     var fileType: String?
     var fileExtension: String?
