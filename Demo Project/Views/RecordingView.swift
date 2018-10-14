@@ -18,6 +18,9 @@ protocol RecordingViewDelegate : class {
 
 class RecordingView: UIView {
     
+    var testProperty1: Int = 0
+    var testProperty2: String = "Test"
+    
     weak var delegate: RecordingViewDelegate?
     
     var timer = Timer()
