@@ -10,10 +10,7 @@ import UIKit
 
 class File: Codable {
     
-    case fileName
-    case fileType
-    //        case fileData             Skips file data in json encoding
-    //        case fileThumbnail
+    
     
     var fileName: String?
     var fileData: Data?
